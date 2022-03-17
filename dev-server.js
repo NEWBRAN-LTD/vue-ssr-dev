@@ -44,7 +44,7 @@ async function createDevServer(
       // always read fresh template in dev
       template = fs.readFileSync(resolve('index.html'), 'utf-8')
       template = await vite.transformIndexHtml(url, template)
-      render = (await vite.ssrLoadModule('/src/entry-server.js')).render
+      render = (await vite.ssrLoadModule('/app/entry-server.js')).render
 
       const [appHtml, preloadLinks] = await render(url, manifest)
       const html = template
@@ -71,5 +71,5 @@ if (!isTest) {
   )
 }
 
-// for test use - see it'as alias 
+// for test use - see it'as alias
 exports.createServer = createDevServer

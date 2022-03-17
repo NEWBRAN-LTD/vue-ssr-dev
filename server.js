@@ -44,7 +44,7 @@ async function createServer(
     const viteMiddleware = vite.middlewares
 
     console.log(viteMiddleware)
-    
+
     app.use(viteMiddleware) // <-- This is the socket server for HMR
   } else {
     app.use(require('compression')())
@@ -64,7 +64,7 @@ async function createServer(
         // always read fresh template in dev
         template = fs.readFileSync(resolve('index.html'), 'utf-8')
         template = await vite.transformIndexHtml(url, template)
-        render = (await vite.ssrLoadModule('/src/entry-server.js')).render
+        render = (await vite.ssrLoadModule('/app/entry-server.js')).render
       } else {
         template = indexProd
         render = require('./dist/server/entry-server.js').render

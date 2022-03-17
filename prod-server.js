@@ -38,7 +38,12 @@ uWS.
     // the job of web server
 
     console.log(`request url`, url)
-    // skip the serve static for now
+
+    // @TODO we should have a map to tell which should be SSG (cached)
+    // then look up here or even better prefix with a path
+    // and move to another handler to make code cleaner 
+
+
     let template, render
     template = indexProd
     render = require('./dist/server/entry-server.js').render
