@@ -9,6 +9,7 @@ specifiers:
   cross-env: ^7.0.3
   dep-import-type: link:./dep-import-type
   express: ^4.17.1
+  mime-types: ^2.1.35
   serve-static: ^1.14.1
   uWebSockets.js: github:uNetworking/uWebSockets.js#v20.6.0
   vite: ^2.8.6
@@ -16,6 +17,7 @@ specifiers:
   vue-router: ^4.0.3
 
 dependencies:
+  mime-types: 2.1.35
   uWebSockets.js: github.com/uNetworking/uWebSockets.js/a58e810e47a23696410f6073c8c905dc38f75da5
   vue: 3.2.31
   vue-router: 4.0.14_vue@3.2.31
@@ -1085,14 +1087,12 @@ packages:
   /mime-db/1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
     engines: {node: '>= 0.6'}
-    dev: true
 
   /mime-types/2.1.35:
     resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==}
     engines: {node: '>= 0.6'}
     dependencies:
       mime-db: 1.52.0
-    dev: true
 
   /mime/1.6.0:
     resolution: {integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==}
@@ -1405,7 +1405,7 @@ packages:
     dev: true
 
   github.com/uNetworking/uWebSockets.js/a58e810e47a23696410f6073c8c905dc38f75da5:
-    resolution: {commit: a58e810e47a23696410f6073c8c905dc38f75da5, repo: git+ssh://git@github.com/uNetworking/uWebSockets.js.git, type: git}
+    resolution: {tarball: https://codeload.github.com/uNetworking/uWebSockets.js/tar.gz/a58e810e47a23696410f6073c8c905dc38f75da5}
     name: uWebSockets.js
     version: 20.6.0
     dev: false
